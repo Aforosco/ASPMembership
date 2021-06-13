@@ -16,6 +16,8 @@ namespace Memberships.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
+
+        [Authorize(Roles = "Admin")]
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admin/Product
